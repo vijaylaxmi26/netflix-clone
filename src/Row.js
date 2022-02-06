@@ -9,14 +9,14 @@ function Row(props) {
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(props.fetchUrl);
-      console.log(request.data.results);
+      // console.log(request.data.results);
       setMovies(request.data.results);
     }
 
     fetchData();
   }, [props.fetchUrl]);
 
-  console.log(movies);
+  //console.log(movies);
 
   return (
     <div className="row">
