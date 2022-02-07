@@ -25,9 +25,9 @@ function Banner(props) {
 
   console.table(movie);
 
-  //   function truncate(str, n) {
-  //     return str.length > n ? str.substr(0, n - 1) + "..." : str;
-  //   }
+  function truncate(str, n) {
+    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+  }
 
   return (
     <header
@@ -52,11 +52,13 @@ function Banner(props) {
         {/* 2 button */}
 
         <h1 className="banner__discription">
-          {/* {truncate(movie?.overview, 150)} */}
-          {movie?.overview}
+          {truncate(movie?.overview, 200)}
+          {/* {movie?.overview} */}
         </h1>
         {/* description */}
       </div>
+
+      <div className="banner--fadeBottom"></div>
     </header>
   );
 }
