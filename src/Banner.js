@@ -4,8 +4,6 @@ import axios from "./axios";
 import requests from "./request";
 import "./banner.css";
 
-const base_url = "https://image.tmdb.org/t/p/original/";
-
 function Banner(props) {
   const [movie, setMovie] = useState([]);
   useEffect(() => {
@@ -23,7 +21,7 @@ function Banner(props) {
     fetchdata();
   }, []);
 
-  console.table(movie);
+  // console.table(movie);
 
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
